@@ -70,9 +70,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -97,6 +95,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -111,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -131,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -152,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -198,8 +301,8 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Biofouling Tutorial</h1>
-<h4 class="author"><em>Dr. Linda Auker</em></h4>
-<h4 class="date"><em>5/7/2019</em></h4>
+<h4 class="author">Dr. Linda Auker</h4>
+<h4 class="date">5/7/2019</h4>
 
 </div>
 
@@ -265,25 +368,32 @@ $(document).ready(function () {
 <li>Once you have downloaded both programs, you only need to open RStudio on your computer. R will automatically run in the background. Once you have opened RStudio, you’ll see a menu and several panes. You should do two things: 1) import your data and 2) open a new R file to copy and paste the code below so you have it in one space and can reproduce your work.</li>
 <li><strong>Import data</strong>: Go to File &gt; Import Dataset &gt; From Text(base)… Choose your dataset from where it is saved on your computer. Once you complete this step, you’ll see the window shown below. Make sure that the headers in your csv file match the ones in the window. If they do not, you might need to click Yes for Heading. Click import. When you do this, you will see a new tab open with your data.</li>
 </ol>
-<pre class="r"><code>dummy_data &lt;- read.csv(&quot;~/Dropbox/SK_Maine_biofouling/dummy_data.csv&quot;)</code></pre>
+<pre class="r"><code>dummy_data &lt;- read.csv(&quot;./_site/dummy_data.csv&quot;)</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li><strong>Open new R file</strong>: I am going to make this simple for now and have you create a simple R Script. (I recommend for more advanced users to use R Notebook for reproducibility.) Open File &gt; New File &gt; R Script. This is an area where you can write code and run it. You can also write code in the console but it is not saved once you close the program. By writing and saving in the script, you can save it for future work.Try out running some code. Copy and paste the code below in your script window and then click Run in your script window.</li>
 </ol>
 <pre class="r"><code>plot(mtcars)</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672" /> What happened here? R has a bunch of sample data included and one of these datasets are car data that you just plotted. It doesn’t make much sense like this, but you can see that typing code and running it does something. Let’s move on to our dataset. 7. For percent cover, a simple frequency by species is probably the best way to visualize data abundance. To do this, we need to install the ggplot and dplyr packages. Then we need to set up the plot. All of the code to do this is below. Copy, paste and run, just like you did before, except, you should change the name of the dataset from dummy_data to the name you gave your csv file (this is what is shown on the tab where your data are displayed in RStudio).</p>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>What happened here? R has a bunch of sample data included and one of these datasets are car data that you just plotted. It doesn’t make much sense like this, but you can see that typing code and running it does something. Let’s move on to our dataset.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>For percent cover, a simple frequency by species is probably the best way to visualize data abundance. To do this, we need to install the ggplot and dplyr packages. Then we need to set up the plot. All of the code to do this is below. Copy, paste and run, just like you did before, except, you should change the name of the dataset from dummy_data to the name you gave your csv file (this is what is shown on the tab where your data are displayed in RStudio).</li>
+</ol>
 <pre class="r"><code>#Install and load packages
-install.packages(&quot;ggplot2&quot;,repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
-<pre><code>## 
+install.packages(&quot;dplyr&quot;, repos = &quot;http://cran.r-project.org/&quot;)</code></pre>
+<pre><code>## Installing package into &#39;C:/Users/lauker/Documents/R/win-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## package &#39;dplyr&#39; successfully unpacked and MD5 sums checked
+## 
 ## The downloaded binary packages are in
-##  /var/folders/zj/r4jmwdh95tdbzmx56dnk127c0000gn/T//RtmpFJVF2t/downloaded_packages</code></pre>
-<pre class="r"><code>install.packages(&quot;dplyr&quot;, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
-<pre><code>## 
+##  C:\Users\lauker\AppData\Local\Temp\RtmpiEBGFa\downloaded_packages</code></pre>
+<pre class="r"><code>install.packages(&quot;ggplot2&quot;, repos = &quot;http://cran.r-project.org/&quot;)</code></pre>
+<pre><code>## Installing package into &#39;C:/Users/lauker/Documents/R/win-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## package &#39;ggplot2&#39; successfully unpacked and MD5 sums checked
+## 
 ## The downloaded binary packages are in
-##  /var/folders/zj/r4jmwdh95tdbzmx56dnk127c0000gn/T//RtmpFJVF2t/downloaded_packages</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.2</code></pre>
+##  C:\Users\lauker\AppData\Local\Temp\RtmpiEBGFa\downloaded_packages</code></pre>
 <pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.2</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -292,10 +402,18 @@ install.packages(&quot;ggplot2&quot;,repos = &quot;http://cran.us.r-project.org&
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>##take the mean of each species&#39; area
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre class="r"><code>##take the mean and standard error of each species&#39; area
 avgarea &lt;- dummy_data %&gt;%
   group_by(Species, Depth) %&gt;%
-  summarise(average.area = mean(Area))
+  summarise(average.area = mean(Area),
+            se.area = sd(Area)/sqrt(n())
+            )
 
 #build the plot
 p &lt;- ggplot(avgarea, aes(x=Species, y = average.area, fill = Depth)) +
@@ -303,8 +421,14 @@ p &lt;- ggplot(avgarea, aes(x=Species, y = average.area, fill = Depth)) +
   ylab(&quot;Average area (sq. cm.)&quot;)
 
 #Fix the x axis so it is easier to read.
-p + theme(axis.text.x = element_text(angle = 90))</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" width="672" /> Note the notations in the R code. Anything followed by a ‘#’ is a comment and is not run as part of the code. A tip for good programming practice is to comment often so you know what the code does. The only thing I don’t like about this graph is that it doesn’t have error bars. You might notice in the code that I calculated a mean for each</p>
+q &lt;- p + theme(axis.text.x = element_text(angle = 90))</code></pre>
+<p>Note the notations in the R code. Anything followed by a ‘#’ is a comment and is not run as part of the code. A tip for good programming practice is to comment often so you know what the code does.</p>
+<pre class="r"><code>q</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>This graph doesn’t have error bars. You might notice in the code that I calculated a mean for each species at each depth, and so we should include error bars. The good news is that this is easy to do. Use the code below.</p>
+<pre class="r"><code>q + geom_errorbar(aes(ymin = average.area - se.area,
+                  ymax = average.area + se.area), width = 0.1, position = position_dodge(.9))</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p><strong>Statistical analysis</strong></p>
 </div>
 <div id="Option2" class="section level2">
