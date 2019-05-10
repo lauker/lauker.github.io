@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Dr. Linda Auker" />
+
+
+<title>Biofouling Tutorial</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Biofouling Tutorial</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown-header">Home</li>
+<li>
+  <a href="index.html"></a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Biofouling Tutorial</h1>
+<h4 class="author"><em>Dr. Linda Auker</em></h4>
+<h4 class="date"><em>5/7/2019</em></h4>
+
+</div>
+
+
+<div id="analysis-of-community-settlement-panels" class="section level2">
+<h2>Analysis of Community Settlement Panels</h2>
+<p>This site contains tutorials for photographing, analyzing, and visualizing data for assessing biofouling on panels.</p>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('pre.r').each(function(i) {
+      $(this).attr('id', 'Chunk_' + i);
+    });
+  });
+</script>
+<p><a href = "#Option1"> Go to Option 1: drawing lines around organisms </a><br> <a href = "#Option2"> Go to Option 2: using a grid to count frequency of organisms</a><br></p>
+</div>
+<div id="Option1" class="section level2">
+<h2>Option 1: drawing lines around organisms</h2>
+<p>Pros: More accurate. Cons: Time-consuming, particularly for heavily settled panels.</p>
+<p><strong>Photographing panels</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Photograph both sides of each panel clearly. The more light available and the closest you can get to the panel without cropping it out will make it easier to analyze. Use the highest resolution on your smartphone or digital camera.</p></li>
+<li><p>Send the labeled photos to _______________ (or add to a dropbox?). Suggested labeling includes depth_side_replicate. So a shallow panel front might be Shallow_front_1, and the other side of the panel is Shallow_back_1.</p></li>
+</ol>
+<p><strong>Analyzing panel photographs in ImageJ</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Download ImageJ, a free open-source image analysis software available from NIH, at <a href="https://imagej.nih.gov/ij/download.html" class="uri">https://imagej.nih.gov/ij/download.html</a>.</p></li>
+<li><p>Open the program. Go to File &gt; Open and find your photograph in the directory. Once you open your photograph, zoom in or out as needed to ensure the entire panel is visible on your screen and you are able to see the organisms clearly.</p></li>
+<li><p>Set the scale of your image. First, choose the “Straight Line” shape and draw a line along one edge of your panel.</p></li>
+</ol>
+<div class="figure">
+<img src="\images\Figure1.jpg" alt="Figure 1" />
+<p class="caption">Figure 1</p>
+</div>
+<p>Next, go to Analyze &gt; Set Scale… . In the dialog box, the program gives you the distance in pixels of the line you have drawn. In “Known distance” enter the length of the panel (10) and in “Unit of length” enter the units used (cm). Click ok.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Now you can start analyzing your panel photograph. Click freehand selection (Figure 2). Carefully, with your mouse, draw a line around a colony. Try to get as close to the edges as you can (Figure 3). If you make an error, let go of the mouse, left-click on the photograph and your line will disappear and you can try again. Now, go to Analyze &gt; Measure. Under Area you will see the area your drawn line covers. This is the area, of your colony.</li>
+</ol>
+<div class="figure">
+<img src="\images\Figure2.jpg" alt="Figure 2" />
+<p class="caption">Figure 2</p>
+</div>
+<div class="figure">
+<img src="\images\Figure3.jpg" alt="Figure 3" />
+<p class="caption">Figure 3</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Repeat step 4 with a different colony. Notice that if you didn’t close the “Results” dialog box, your first measurements are still there.</p></li>
+<li><p>Repeat until you have measured all species on the panel.</p></li>
+<li><p>It’s very likely you will have more than one colony of the same species, or more than one area value for the same species. Make sure to add these up before recording on your spreadsheet for analysis. For example, for one colony of <em>Botrylloides violaceous</em>, you may have an area value of 4.35. For another colony of this species, the area is 1.53. Therefore, the total area is 5.88.</p></li>
+</ol>
+<p><strong>Recording data in a spreadsheet</strong></p>
+<p>Record your data in a spreadsheet. You will want to include Date, Panel number and identification, side, depth, species, and area for variables. Figure 4 below shows a suggested format for data entry. (DMC = Darling Marine Center)</p>
+<div class="figure">
+<img src="\images\Figure4.jpg" alt="Figure 4" />
+<p class="caption">Figure 4</p>
+</div>
+<p><strong>Visualizing data</strong></p>
+<ol style="list-style-type: decimal">
+<li>Be sure to save your spreadsheet as a .csv file before analyzing your data.</li>
+<li>I use R and RStudio to visualize and analyze data. I recommend you do as well because 1) it’s free, 2) it’s flexible, and 3) it’s customizable.</li>
+<li>Download R and RStudio. R can be downloaded from <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>. RStudio is a handy user interface and definitely recommended for beginners in the R Programming Environment. You can download RStudio here: <a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a>. Download the R Studio Desktop version for free! Note: you <em>need</em> R to use RStudio but not vice versa. Think of RStudio as your helpful handy graphic interface to use the power of R.</li>
+<li>Once you have downloaded both programs, you only need to open RStudio on your computer. R will automatically run in the background. Once you have opened RStudio, you’ll see a menu and several panes. You should do two things: 1) import your data and 2) open a new R file to copy and paste the code below so you have it in one space and can reproduce your work.</li>
+<li><strong>Import data</strong>: Go to File &gt; Import Dataset &gt; From Text(base)… Choose your dataset from where it is saved on your computer. Once you complete this step, you’ll see the window shown below. Make sure that the headers in your csv file match the ones in the window. If they do not, you might need to click Yes for Heading. Click import. When you do this, you will see a new tab open with your data.</li>
+</ol>
+<pre class="r"><code>dummy_data &lt;- read.csv(&quot;~/Dropbox/SK_Maine_biofouling/dummy_data.csv&quot;)</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Open new R file</strong>: I am going to make this simple for now and have you create a simple R Script. (I recommend for more advanced users to use R Notebook for reproducibility.) Open File &gt; New File &gt; R Script. This is an area where you can write code and run it. You can also write code in the console but it is not saved once you close the program. By writing and saving in the script, you can save it for future work.Try out running some code. Copy and paste the code below in your script window and then click Run in your script window.</li>
+</ol>
+<pre class="r"><code>plot(mtcars)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672" /> What happened here? R has a bunch of sample data included and one of these datasets are car data that you just plotted. It doesn’t make much sense like this, but you can see that typing code and running it does something. Let’s move on to our dataset. 7. For percent cover, a simple frequency by species is probably the best way to visualize data abundance. To do this, we need to install the ggplot and dplyr packages. Then we need to set up the plot. All of the code to do this is below. Copy, paste and run, just like you did before, except, you should change the name of the dataset from dummy_data to the name you gave your csv file (this is what is shown on the tab where your data are displayed in RStudio).</p>
+<pre class="r"><code>#Install and load packages
+install.packages(&quot;ggplot2&quot;,repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
+<pre><code>## 
+## The downloaded binary packages are in
+##  /var/folders/zj/r4jmwdh95tdbzmx56dnk127c0000gn/T//RtmpFJVF2t/downloaded_packages</code></pre>
+<pre class="r"><code>install.packages(&quot;dplyr&quot;, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
+<pre><code>## 
+## The downloaded binary packages are in
+##  /var/folders/zj/r4jmwdh95tdbzmx56dnk127c0000gn/T//RtmpFJVF2t/downloaded_packages</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>##take the mean of each species&#39; area
+avgarea &lt;- dummy_data %&gt;%
+  group_by(Species, Depth) %&gt;%
+  summarise(average.area = mean(Area))
+
+#build the plot
+p &lt;- ggplot(avgarea, aes(x=Species, y = average.area, fill = Depth)) +
+  geom_bar(stat = &#39;identity&#39;, position = &#39;dodge&#39;) + #dodge puts the bars next to each other
+  ylab(&quot;Average area (sq. cm.)&quot;)
+
+#Fix the x axis so it is easier to read.
+p + theme(axis.text.x = element_text(angle = 90))</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" width="672" /> Note the notations in the R code. Anything followed by a ‘#’ is a comment and is not run as part of the code. A tip for good programming practice is to comment often so you know what the code does. The only thing I don’t like about this graph is that it doesn’t have error bars. You might notice in the code that I calculated a mean for each</p>
+<p><strong>Statistical analysis</strong></p>
+</div>
+<div id="Option2" class="section level2">
+<h2>Option 2: using a grid to count frequency of organisms</h2>
+<p>Pros: Faster processing. Cons: With a sparsely populated panel, some species may be missed.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
