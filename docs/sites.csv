@@ -1,0 +1,110 @@
+SITEID,Details,lat,lng,state
+CTAP,"Avery Point, Groton",41.3154,-72.0634,Connecticut
+CTGR,Groton,41.35,-72.0789,Connecticut
+CTLIS,Long Island Sound,41.0833,-73,Connecticut
+CTMF,"Mystic Marine Fuel, Mystic",41.3334,-71.9759,Connecticut
+CTMY,"Brewer Yacht Yard, Mystic",41.3542,-71.9669,Connecticut
+CTMY,"Milford Yacht Club, Milford",41.2222,-73.0569,Connecticut
+CTSF,Stamford,41.0533,-73.5392,Connecticut
+CTST,"Brewer Yacht Haven Marine Center, Stamford",41.0534,-73.5387,Connecticut
+MABA,Barnstable,41.7167,-70.2667,Massachusetts
+MABP,Beverly Public Pier,42.5404,-70.887,Massachusetts
+MACA,"Cape Ann Marina, Gloucester",42.6209,-70.6912,Massachusetts
+MACH,Chatham,41.7437,-69.9559,Massachusetts
+MACH2,Chatham,41.665,-69.9567,Massachusetts
+MADI,"Deer Island, Boston",42.3518,-70.9606,Massachusetts
+MADP,Duxbury Town Pier,42.0001,-70.6578,Massachusetts
+MAFR,Fall River,41.7062,-71.162,Massachusetts
+MAGP,Gloucester State Pier,42.6158,-70.6625,Massachusetts
+MAGP2,Gloucester State Pier,42.5958,-70.6694,Massachusetts
+MAHCM,Hawthorne Cove Marina,42.522,-70.8823,Massachusetts
+MAHY,Hyannis,41.6315,-70.287,Massachusetts
+MAHY2,Hyannis,41.6528,-70.2833,Massachusetts
+MAMMA,"Massachusetts Maritime Academy, Bourne",41.7396,-70.6239,Massachusetts
+MAMMA2,"Massachusetts Maritime Academy, Bourne",41.7394,-70.6244,Massachusetts
+MAMP,"Manomet Point, Plymouth",41.9268,-70.5389,Massachusetts
+MAMV,Martha's Vineyard,41.4579,-70.5866,Massachusetts
+MANB,New Bedford,41.6778,-70.9167,Massachusetts
+MAOS,Osterville,41.6284,-70.387,Massachusetts
+MAPT,Plymouth Town Wharf,41.9623,-70.6662,Massachusetts
+MAPT,Provincetown,42.0492,-70.1808,Massachusetts
+MAQY,Quincy,42.2528,-71.0028,Massachusetts
+MARP,"Straitsmouth Island, Rockport",42.6598,-70.5912,Massachusetts
+MARW,"Rowes Wharf, Boston",42.357,-71.0409,Massachusetts
+MASA,Sagamore,41.7701,-70.5284,Massachusetts
+MASH,Sesuit Harbor,41.7557,-70.155,Massachusetts
+MASM,Sandwich Marina,41.7704,-70.5036,Massachusetts
+MASM2,Sandwich Marina,41.765,-70.475,Massachusetts
+MASP,"Port Harbor Marina, South Portland",43.6414,-70.2414,Maine
+MATM,Tripps Marina,41.5079,-71.0486,Massachusetts
+MATP,"Tucks Point Marina, Beverly",42.5676,-70.7787,Massachusetts
+MAVH,Vineyard Haven,41.4668,-70.5911,Massachusetts
+MAWF,West Falmouth Harbor,41.6057,-70.6495,Massachusetts
+MAWH,Woods Hole,41.5254,-70.6725,Massachusetts
+MAWH2,Woods Hole,41.52,-70.6667,Massachusetts
+MAWH3,Woods Hole,41.5257,-70.6703,Massachusetts
+MAWI,"Off Cottage Park Road, Winthrop",42.3751,-70.9828,Massachusetts
+MAWI,Winter Island,42.5293,-70.8689,Massachusetts
+MAWR,Westport River,41.5125,-71.0894,Massachusetts
+MEBE,Belfast,44.4281,-69.002,Maine
+MEBH,Boothbay Harbor,43.8522,-69.6286,Maine
+MEBI,"Badger Island Marina, Kittery",43.0823,-70.7517,Maine
+MEBLI,Bremen Long Island,43.9901,-69.3876,Maine
+MECA,Castine,44.3829,-68.7989,Maine
+MECP,Cape Porpoise,43.3634,-70.432,Maine
+MEDA,Damariscotta,43.8947,-69.5878,Maine
+MEDMC,Darling Marine Center Dock,43.93421,-69.579558,Maine
+MEDMC,Darling Marine Center Dock,43.93421,-69.5796,Maine
+MEDMC,Darling Marine Center Dock,43.93421,-69.579558,Maine
+MEDMC2,Darling Marine Center Dock,43.9401,-69.5737,Maine
+MEDMC2,Darling Marine Center Dock,43.9401,-69.5737,Maine
+MEEC,Eastport Commercial Pier,44.9056,-66.9828,Maine
+MEEP,Eastport,44.9095,-67.0555,Maine
+MEFP,Fox Point,43.1212,-70.8589,Maine
+MEHH,"Head Harbor, Campobello Island",44.9466,-66.9063,Maine
+MEJC,"Journey's End Marina, Camden",44.2104,-69.0528,Maine
+MEJR,"Journey's End Marina, Rockland",44.1045,-69.1017,Maine
+MEKE,Kennebunkport,43.3618,-70.4767,Maine
+MEKE2,Kennebunkport,43.3617,-70.4772,Maine
+MEPI,Peter's Island Scallop Farm,43.90908,-69.5681,Maine
+MEPY,Portland Yacht Services,43.6651,-70.2401,Maine
+MEPY2,Portland Yacht Services,43.6575,-70.2411,Maine
+MESB,South Bristol Fisherman's Co-op,43.863908,-69.554631,Maine
+MESF,Brewer South Freeport Marina,43.8204,-70.1053,Maine
+METI,Thrumcap Island,43.8203,-69.5497,Maine
+MEWH,Winter Harbor,44.3645,-68.0811,Maine
+MEWM,"Wayfairer Marina, Camden",44.2104,-69.0528,Maine
+MWRA,MWRA Quincy (Sewage Plant),42.2918,-70.9745,Massachusetts
+NHDI,"Duck Island, Isles of Shoals",43.0048,-70.6059,New Hampshire
+NHFP,"Fort Point, Newcastle",43.0723,-70.7098,New Hampshire
+NHHP,Hampton State Pier,42.9375,-70.8394,New Hampshire
+NHNC,Newcastle,43.0723,-70.7162,New Hampshire
+NHPM,Portsmouth,43.0717,-70.7631,New Hampshire
+NYGP,"Stirling Yacht Harbor, Greenport, Long Island",41.1004,-72.3548,New York
+NYMK,"East Lake Drive, Montauk",41.0614,-71.92222,New York
+NYPO,Old Ponquogue Bridge,40.8448,-72.5006,New York
+NYSJ,South Jamesport,40.9364,-72.5778,New York
+RIAH,"Allen Harbor, North Kingstown",41.6237,-71.4126,Rhode Island
+RIBI,Block Island,41.1831,-71.5828,Rhode Island
+RIBT,Beavertail State Park,41.449,-71.3995,Rhode Island
+RICH,"Coasters Harbor Island, Newport",41.5107,-71.327,Rhode Island
+RICM,Conanicut Marina,41.49533,-71.36665,Rhode Island
+RICSP,"Colt State Park, Bristol",41.6697,-71.3014,Rhode Island
+RIFA,Fort Adams Boat Ramp,41.47944,-71.335566,Rhode Island
+RIFW,"Fort Wetherill, Jamestown",41.4883,-71.3578,Rhode Island
+RIGIB,Great Island Bridge,41.38306,-71.50778,Rhode Island
+RIGIC,Goat Island Causeway,41.49139,-71.32222,Rhode Island
+RIJT,Jamestown,41.4971,-71.3673,Rhode Island
+RIMP,"Matunuck, Point Judith Marina",41.3788,-71.5169,Rhode Island
+RIMP2,"Matunuck, Point Judith Marina",41.3732,-71.5367,Rhode Island
+RINS,Newport Shipyard,41.4901,-71.3217,Rhode Island
+RIPC,"Potters Cove, Prudence Island",41.6423,-71.3414,Rhode Island
+RIRW,"Roger Williams University dock, Bristol",41.6484,-71.2609,Rhode Island
+RISK,Sakonnet Point,41.4542,-71.1953,Rhode Island
+RISP,"South Pier, Prudence Island",41.5882,-71.3245,Rhode Island
+RITI,Tiverton,41.6246,-71.2064,Rhode Island
+RITP,Taylor Point,41.51,-71.362,Rhode Island
+RIWA,Warwick,41.6839,-71.3917,Rhode Island
+RIWM,"Wickford Marina, Wickford",41.5754,-71.4423,Rhode Island
+RIWM2,"Wickford Marina, Wickford",41.5739,-71.4619,Rhode Island
+RIWP,Wilson Park,41.57825,-71.45242,Rhode Island
