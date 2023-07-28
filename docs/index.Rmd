@@ -1,5 +1,5 @@
 ---
-title: "Ascidian Biofouling Dashboard"
+title: "Northeastern US Biofouling Dashboard"
 author: "Dr. Linda A. Auker, Auker Ecological Services LLC"
 date: "`r Sys.Date()`"
 email: "linda.auker@gmail.com"
@@ -356,20 +356,35 @@ Cons: With a sparsely populated panel, some species may be missed.
 
 No matter what you use to count your species, be sure to save your spreadsheet as a .csv file before analyzing your data.
 
-# Visualize your data using this Shiny App! {data-navmenu="Panel Tutorial"}
-```{r, echo=FALSE, out.width = "1000px"}
-knitr::include_app("https://mercymatters.shinyapps.io/DashboardTest/",
-                   height = "1000px")
-```
+# Visualize your data using our Shiny app {data-navmenu="Panel Tutorial"}
 
-# Scallop Biofouling
+If you follow the data format in the previous tutorial steps (Figure 4), you can upload it to <a href = "https://mercymatters.shinyapps.io/DashboardTest/">this Shiny app </a> to create a data visualization that you can screenshot or download for your own records. Follow the instructions below:
+
+1) Be sure that you have a .csv (comma delimited) file ready for upload.
+
+2) Navigate to the app link above.
+
+3) Under "Choose CSV file", click Browse and navigate to where your .csv file has been stored. Click OK once you have chosen the file saved to your local hard drive. If you are successful, you will see a preview of your data and a graph appear. 
+
+4) Ensure that Header is checked if you have column titles in your file.
+
+5) Under outcome variable, choose "Area" and under predictor variable, choose "Species". Leave the settings as the default. You can now use the settings in the upper right corner of the image to pan, zoom, toggle, and save the file.
+
+# SK Scallop Biofoulers
 
 These data were collected as part of a NOAA Saltonstall Kennedy Grant.
 
-```{r, echo=FALSE, out.width = "2500px"}
-knitr::include_url("https://www.arcgis.com/apps/dashboards/d4a1559572cf45769bcc641b3d3d73d1",
-                   height = "1000px")
-```
+To observe biofouling species collected as part of a NOAA Saltonstall Kennedy Grant awarded to Dr. Damien Brady at the University of Maine, check out the <a href = "https://arcgis.com/apps/dashboards/d4a1559572cf45769bcc641b3d3d73d1"> ArcGIS Dashboard at this link.</a> The locations shown in this dashboard are limited to scallop farms in the Maine coastal region and show temporal and spatial change in biofouling abundance.
+
+For this project, we used 10x10cm Whitlatch panels (pictured below) at two depths to collect biofoulants on a monthly basis at four different scallop farms.
+
+For more information about <a href = "https://umaine.edu/aquaculture/project/optimizing-production-and-products-for-scallop-aquaculture/">this project</a>, see some of the resulting research output:
+
+Struan Coleman, Dana Morse, W. Christian Brayden & Damian C. Brady (2021): Developing a bioeconomic framework for scallop culture optimization and product development, Aquaculture Economics & Management, DOI: 10.1080/13657305.2021.2000517 <a href = "https://www.tandfonline.com/doi/full/10.1080/13657305.2021.2000517">link</a>
+
+or contact <a href="mailto:dana.morse@maine.edu">Dana Morse</a>, University of Maine Sea Grant Extension.
+
+You may also want to check out <a href="https://youtu.be/KhZwlQem1vA"> this webinar </a> given at the First Misericordia Ocean Sustainability Symposium by Dana Morse and Linda Auker. The talks within are on *Biofouling and the Maine Shellfish Farming Industry* and *Using GIS to Communicate Biofouling in Aquaculture.*
 
 # References
 
