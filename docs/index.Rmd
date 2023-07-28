@@ -7,7 +7,6 @@ output:
   flexdashboard::flex_dashboard:
     fig_caption: TRUE
     orientation: columns
-    runtime: shiny
 editor_options: 
   markdown: 
     wrap: 72
