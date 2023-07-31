@@ -332,13 +332,13 @@ This method tends to be faster than tracing each species as described in Option 
 
 1) In Image J, go to Plugins > Analyze > Grid. 
 
-![Figure 5](img/Figure5.png)
+![Menu selection in ImageJ](img/Figure5.png){ width=25% height=50% }
 
 2) Choose Points from the dropdown menu, and be sure to pick a contrasting color to ensure your points stand out from the image. 
 
 3) Change the Area per Point value until you get ~ 100 points on your photo of your panel (a 10x10 grid). If you don't have exactly 100 points, take note of the number you have on the image and write this down. (Too few points leads to lower accuracy; too many points becomes very time-consuming.)
 
-![Figure 6](img/Figure6.png)
+![Points chosen for grid in ImageJ](img/Figure6.png){ width=25% height=50% }
 
 4) Identify and tally species that are under each point on the image.
 
