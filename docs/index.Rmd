@@ -298,66 +298,57 @@ map
     to ensure the entire panel is visible on your screen and you are
     able to see the organisms clearly.
 
-# Analysis of Community Settlement Panels in Image J {data-navmenu="Panel Tutorial"}
+# Option 1: Analysis of Community Settlement Panels in Image J using Outline {data-navmenu="Panel Tutorial"}
 
-Option 1: 
-
-1.  Set the scale of your image. First, choose the "Straight Line" shape
-    and draw a line along one edge of your panel.
+1)  Set the scale of your image. First, choose the "Straight Line" shape and draw a line along one edge of your panel.
 
 ![Figure 1](img/Figure1.jpg)
 
-Next, go to Analyze > Set Scale... . In the dialog box, the program
-gives you the distance in pixels of the line you have drawn. In "Known
-distance" enter the length of the panel (10) and in "Unit of length"
-enter the units used (cm). Click ok.
+2) Next, go to Analyze > Set Scale... . In the dialog box, the program gives you the distance in pixels of the line you have drawn. In "Known distance" enter the length of the panel (10) and in "Unit of length" enter the units used (cm). Click ok.
 
-2.  Now you can start analyzing your panel photograph. Click freehand
-    selection (Figure 2). Carefully, with your mouse, draw a line around
-    a colony. Try to get as close to the edges as you can (Figure 3). If
-    you make an error, let go of the mouse, left-click on the photograph
-    and your line will disappear and you can try again. Now, go to
-    Analyze > Measure. Under Area you will see the area your drawn line
-    covers. This is the area, of your colony.
+3) Now you can start analyzing your panel photograph. Click freehand selection (Figure 2). Carefully, with your mouse, draw a line around a colony. Try to get as close to the edges as you can (Figure 3). If you make an error, let go of the mouse, left-click on the photograph and your line will disappear and you can try again. Now, go to Analyze > Measure. Under Area you will see the area your drawn line covers. This is the area of your colony.
 
 ![Figure 2](img/Figure2.jpg)
 
 
 ![Figure 3](img/Figure3.jpg)
 
-3.  Repeat step 2 with a different colony. Notice that if you didn't
-    close the "Results" dialog box, your first measurements are still
-    there.
+4)  Repeat step 2 with a different colony. Notice that if you didn't close the "Results" dialog box, your first measurements are still there.
 
-4.  Repeat until you have measured all species on the panel.
+5)  Repeat until you have measured all species on the panel.
 
-5.  It's very likely you will have more than one colony of the same
-    species, or more than one area value for the same species. Make sure
-    to add these up before recording on your spreadsheet for analysis.
-    For example, for one colony of <i>Botrylloides violaceous</i>, you may
-    have an area value of 4.35. For another colony of this species, the
-    area is 1.53. Therefore, the total area is 5.88.
+6)  It's very likely you will have more than one colony of the same species, or more than one area value for the same species. Make sure to add these up before recording on your spreadsheet for analysis. For example, for one colony of <i>Botrylloides violaceous</i>, you may have an area value of 4.35. For another colony of this species, the area is 1.53. Therefore, the total area is 5.88.
 
 **Recording data in a spreadsheet**
 
-Record your data in a spreadsheet. You will want to include Date, Panel
-number and identification, side, depth, species, and area for variables.
-Figure 4 below shows a suggested format for data entry. (DMC = Darling
+Record your data in a spreadsheet. You will want to include Date, Panel number and identification, side, depth, species, and area for variables. Figure 4 below shows a suggested format for data entry. *Make sure you save your spreadsheet as a .csv file if you plan to use the app we prepared to visualize your data.* (DMC = Darling
 Marine Center)
 
 ![Figure 4](img/Figure4.jpg)
 
+# Option 2: Analysis of Community Settlement Panels in Image J using Grid {data-navmenu="Panel Tutorial"}
 
-Option 2: using a grid to count percent cover of organisms 
+This method tends to be faster than tracing each species as described in Option 1. However, with a sparsely populated panel, some species may be missed.
 
-Pros: Faster processing. 
-Cons: With a sparsely populated panel, some species may be missed.
+1) In Image J, go to Plugins > Analyze > Grid. 
 
-No matter what you use to count your species, be sure to save your spreadsheet as a .csv file before analyzing your data.
+![Figure 5](img/Figure5.png)
+
+2) Choose Points from the dropdown menu, and be sure to pick a contrasting color to ensure your points stand out from the image. 
+
+3) Change the Area per Point value until you get ~ 100 points on your photo of your panel (a 10x10 grid). If you don't have exactly 100 points, take note of the number you have on the image and write this down. (Too few points leads to lower accuracy; too many points becomes very time-consuming.)
+
+![Figure 6](img/Figure6.png)
+
+4) Identify and tally species that are under each point on the image.
+
+5) To calculate percent cover for each species, divide the number of points occupied by each species by the total number of points on the image (e.g., 100 as suggested above). Multiply this by 100. This value will go in a column called "Percent Cover" (instead of the column called "Area" using Option 1).
 
 # Visualize your data using our Shiny app {data-navmenu="Panel Tutorial"}
 
 If you follow the data format in the previous tutorial steps (Figure 4), you can upload it to <a href = "https://mercymatters.shinyapps.io/DashboardTest/">this Shiny app </a> to create a data visualization that you can screenshot or download for your own records. Follow the instructions below:
+
+![Figure 4](img/Figure4.jpg)
 
 1) Be sure that you have a .csv (comma delimited) file ready for upload.
 
@@ -371,11 +362,12 @@ If you follow the data format in the previous tutorial steps (Figure 4), you can
 
 # SK Scallop Biofoulers
 
-These data were collected as part of a NOAA Saltonstall Kennedy Grant.
-
 To observe biofouling species collected as part of a NOAA Saltonstall Kennedy Grant awarded to Dr. Damien Brady at the University of Maine, check out the <a href = "https://arcgis.com/apps/dashboards/d4a1559572cf45769bcc641b3d3d73d1"> ArcGIS Dashboard at this link.</a> The locations shown in this dashboard are limited to scallop farms in the Maine coastal region and show temporal and spatial change in biofouling abundance.
 
-For this project, we used 10x10cm Whitlatch panels (pictured below) at two depths to collect biofoulants on a monthly basis at four different scallop farms.
+For this project, we used 10x10cm Whitlatch panels (pictured below) at two depths to collect biofouling species on a monthly basis at four different scallop farms.
+
+![Panels used in this study were based on a design by Robert Whitlatch, University of Connecticut](img/panel.png){ width=25% height=50% }
+
 
 For more information about <a href = "https://umaine.edu/aquaculture/project/optimizing-production-and-products-for-scallop-aquaculture/">this project</a>, see some of the resulting research output:
 
