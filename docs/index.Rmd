@@ -10,7 +10,6 @@ output:
 editor_options: 
   markdown: 
     wrap: 72
-runtime: shiny
 ---
 
 ```{r, echo=FALSE}
