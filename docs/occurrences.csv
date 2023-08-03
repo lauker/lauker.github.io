@@ -1,154 +1,143 @@
-,SpeciesID,Source,Year,SITEID
-Aasp,,,,
-,Aasp,Berger and Whitlatch 1997,1985,CTAP
-,Aasp,MIT Sea Grant 2011,2009,CTMF
-,Aasp,MIT Sea Grant 2003,2000,MADI
-,Aasp,MIT Sea Grant 2003,2000,MAFR
-,Aasp,MIT Sea Grant 2003,2000,MAGP
-,Aasp,MIT Sea Grant 2003,2000,MAHCM
-,Aasp,Carman et al 2009,2007,MAMV
-,Aasp,MIT Sea Grant 2003,2000,MARW
-,Aasp,MIT Sea Grant 2003,2000,MASM
-,Aasp,MIT Sea Grant 2003,2003,MASP
-,Aasp,MIT Sea Grant 2003,2000,MATP
-,Aasp,MIT Sea Grant 2003,2000,MAWH
-,Aasp,MIT Sea Grant 2003,2003,MEPY
-,Aasp,MIT Sea Grant 2003,2000,RIAH
-,Aasp,MIT Sea Grant 2003,2000,RICH
-,Aasp,Whitlatch and Osman 2000,1997,RIJT
-,Aasp,MIT Sea Grant 2011,2009,RIMP
-,Aasp,MIT Sea Grant 2003,2000,RINS
-,Aasp,MIT Sea Grant 2003,2000,RIPC
-,Aasp,MIT Sea Grant 2003,2000,RIRW
-,Aasp,MIT Sea Grant 2003,2000,RISP
-,Aasp,MIT Sea Grant 2003,2000,RIWM
-Dvex,,,,
-,Dvex,Osman and Whitlatch 2007,2000,CTAP
-,Dvex,MIT Sea Grant 2011,2007,MABP
-,Dvex,USGS Woods Hole Science Center 2003-2007,2003,MACH2
-,Dvex,MIT Sea Grant 2003,2000,MAMMA
-,Dvex,Osterville/MA/Cotuit Bay,2005,MAOS
-,Dvex,USGS Woods Hole Science Center 2003-2007,2003,MAPT
-,Dvex,MIT Sea Grant 2011,2006,MARP
-,Dvex,MIT Sea Grant 2011,2008,MASH
-,Dvex,MIT Sea Grant 2003-2007,2000,MASM
-,Dvex,MIT Sea Grant 2003,2000,MATM
-,Dvex,MIT Sea Grant 2003-2007,2004,MAVH
-,Dvex,USGS Woods Hole Science Center 2003-2007,2004,MAWF
-,Dvex,USGS Woods Hole Science Center 2003-2007,2000,MAWH2
-,Dvex,USGS Woods Hole Science Center 2003-2007,2006,MAWI
-,Dvex,MIT Sea Grant 2011,2008,MAWI
-,Dvex,MIT Sea Grant 2008,2008,MEBH
-,Dvex,Ruiz et al (unpublished),2001,MEBI
-,Dvex,USGS Woods Hole Science Center 2003-2007,2002,MEBLI
-,Dvex,USGS Woods Hole Science Center 2003-2007,1991,MEDA
-,Dvex,USGS Woods Hole Science Center 2003-2007,1982,MEDA
-,Dvex,Lazzeri and Auker 2022,2019,MEDMC
-,Dvex,Bullard et al 2007,2006,MEEC
-,Dvex,USGS Woods Hole Science Center 2003-2007,2005,MEEP
-,Dvex,Lazzeri and Auker 2022,2019,MEPI
-,Dvex,Lazzeri and Auker 2022,2019,MESB
-,Dvex,Dijkstra et al 2007,2005,MEWH
-,Dvex,Bullard et al 2007,2003,NHDI
-,Dvex,USGS Woods Hole Science Center 2003-2007,2002,NHFP
-,Dvex,USGS Woods Hole Science Center 2010,2009,NYMK
-,Dvex,USGS Woods Hole Science Center 2003-2007,2004,NYPO
-,Dvex,Carman et al 2009,2007,RIBI
-,Dvex,Auker and Oviatt 2008,2005,RIBT
-,Dvex,MIT Sea Grant 2003-2007,2000,RICH
-,Dvex,Auker and Oviatt 2008,2005,RICM
-,Dvex,Auker 2019,2015,RICM
-,Dvex,Auker and Oviatt 2008,2005,RIFA
-,Dvex,Auker and Oviatt 2008,2005,RIFW
-,Dvex,Auker and Oviatt 2008,2005,RIGIB
-,Dvex,Auker 2019,2015,RIGIB
-,Dvex,Auker and Oviatt 2008,2005,RIGIC
-,Dvex,Auker 2019,2015,RIGIC
-,Dvex,MIT Sea Grant,2009,RIMP2
-,Dvex,Auker and Oviatt 2008,2005,RISP
-,Dvex,Auker and Oviatt 2008,2005,RITP
-,Dvex,Auker and Oviatt 2008,2005,RIWP
-Scla,,,,
-,Scla,Whitlatch and Osman 2000,1997,CTGR
-,Scla,Carlton 1989,1972,CTLIS
-,Scla,MIT Sea Grant 2003,2003,CTMY
-,Scla,MIT Sea Grant 2003,2003,CTMY
-,Scla,MIT Sea Grant 2003,2003,CTSF
-,Scla,Whitlatch and Osman 2000,1998,MABA
-,Scla,Berman et al 1992,?,MABP
-,Scla,MIT Sea Grant 2003,2000,MAGP2
-,Scla,Whitlatch and Osman 2000,1998,MAHY2
-,Scla,MIT Sea Grant 2003,2000,MAMMA2
-,Scla,MIT Sea Grant 2003,2000,MANB
-,Scla,MIT Sea Grant 2003,2000,MAQY
-,Scla,MIT Sea Grant 2003,2000,MARW
-,Scla,MIT Sea Grant,2000,MASM2
-,Scla,MIT Sea Grant 2003,1986,MAWH3
-,Scla,MIT Sea Grant 2003,2000,MAWR
-,Scla,Whitlatch and Osman 2000,1998,MEBH
-,Scla,Lazzeri and Auker 2022,2019,MEDMC
-,Scla,MIT Sea Grant 2008,2007,MEDMC2
-,Scla,MIT Sea Grant 2008,2007,MEJC
-,Scla,Whitlatch and Osman 2000,1998,MEKE2
-,Scla,MIT Sea Grant 2003,2003,MEPY2
-,Scla,MIT Sea Grant 2003,2003,NHHP
-,Scla,Berman et al 1992,1985,NHPM
-,Scla,MIT Sea Grant 2003,2003,NYSJ
-,Scla,MIT Sea Grant 2003,2003,RIAH
-,Scla,MIT Sea Grant 2003,2004,RIBT
-,Scla,MIT Sea Grant 2004,2000,RICH
-,Scla,MIT Sea Grant 2003,2000,RICSP
-,Scla,Whitlatch and Osman 2000,1998,RISK
-,Scla,MIT Sea Grant 2003,2000,RIWA
-,Scla,Plough 1978,1978,RIWM2
-Bvio,,,,
-,Bvio,MIT Sea Grant 2003,2003,CTST
-,Bvio,Whitlatch and Osman 2000,1998,MABA
-,Bvio,MIT Sea Grant 2003,2000,MACA
-,Bvio,Whitlatch and Osman 2000,1998,MACH
-,Bvio,MIT Sea Grant 2003,2000,MADI
-,Bvio,MIT Sea Grant 2003,2000,MADP
-,Bvio,MIT Sea Grant 2003,2000,MAFR
-,Bvio,MIT Sea Grant 2003,2000,MAHCM
-,Bvio,Whitlatch and Osman 2000,1998,MAHY
-,Bvio,MIT Sea Grant 2003,2003,MAMMA
-,Bvio,Whitlatch and Osman 2000,1998,MAMP
-,Bvio,MIT Sea Grant 2003,2000,MAPT
-,Bvio,MIT Sea Grant 2003,2000,MARW
-,Bvio,Whitlatch and Osman 2000,1998,MASA
-,Bvio,MIT Sea Grant 2003,2000,MASM2
-,Bvio,MIT Sea Grant 2003,2003,MASP
-,Bvio,MIT Sea Grant 2003,2000,MATP
-,Bvio,Whitlatch and Osman 2000,1998,MAWF
-,Bvio,Whitlatch and Osman 2000,1998,MAWR
-,Bvio,Whitlatch and Osman 2000,1998,MEBE
-,Bvio,Whitlatch and Osman 2000,1998,MEBH
-,Bvio,Whitlatch and Osman 2000,1998,MECA
-,Bvio,Whitlatch and Osman 2000,1998,MECP
-,Bvio,Lazzeri and Auker 2022,2019,MEDMC
-,Bvio,MIT Sea Grant 2008,2007,MEDMC2
-,Bvio,Trott 2004,2004,MEEP
-,Bvio,Berman et al 1992,1980,MEFP
-,Bvio,Martin et al 2011,2009,MEHH
-,Bvio,MIT Sea Grant 2008,2007,MEJR
-,Bvio,Whitlatch and Osman 2000,1998,MEKE
-,Bvio,Lazzeri and Auker 2022,2019,MEPI
-,Bvio,Lazzeri and Auker 2022,2019,MESB
-,Bvio,MIT Sea Grant 2003,2003,MESF
-,Bvio,USGS Woods Hole Science Center 2006,2002,METI
-,Bvio,MIT Sea Grant 2008,2007,MEWM
-,Bvio,MIT Sea Grant 2003,2000,MWRA
-,Bvio,MIT Sea Grant 2003,2003,NHHP
-,Bvio,Blezard 1999,1998,NHNC
-,Bvio,Whitlatch and Osman 1995,2003,NYGP
-,Bvio,MIT Sea Grant 2003,2000,RIAH
-,Bvio,MIT Sea Grant 2006,2004,RIBT
-,Bvio,MIT Sea Grant 2003,2000,RICH
-,Bvio,Whitlatch and Osman 2000,1998,RIJT
-,Bvio,MIT Sea Grant 2003,2003,RINS
-,Bvio,MIT Sea Grant 2003,2000,RIRW
-,Bvio,Whitlatch and Osman 2000,1998,RISK
-,Bvio,MIT Sea Grant 2003,2000,RISP
-,Bvio,Whitlatch and Osman 2000,1998,RITI
-,Bvio,MIT Sea Grant 2003,2000,RIWA
-,Bvio,MIT Sea Grant 2003,2000,RIWM
+SpeciesID,Source,Year,SITEID
+Aasp,Berger and Whitlatch 1997,1985,CTAP
+Aasp,MIT Sea Grant 2011,2009,CTMF
+Aasp,MIT Sea Grant 2003,2000,MADI
+Aasp,MIT Sea Grant 2003,2000,MAFR
+Aasp,MIT Sea Grant 2003,2000,MAGP
+Aasp,MIT Sea Grant 2003,2000,MAHCM
+Aasp,Carman et al 2009,2007,MAMV
+Aasp,MIT Sea Grant 2003,2000,MARW
+Aasp,MIT Sea Grant 2003,2000,MASM
+Aasp,MIT Sea Grant 2003,2003,MASP
+Aasp,MIT Sea Grant 2003,2000,MATP
+Aasp,MIT Sea Grant 2003,2000,MAWH
+Aasp,MIT Sea Grant 2003,2003,MEPY
+Aasp,MIT Sea Grant 2003,2000,RIAH
+Aasp,MIT Sea Grant 2003,2000,RICH
+Aasp,Whitlatch and Osman 2000,1997,RIJT
+Aasp,MIT Sea Grant 2011,2009,RIMP
+Aasp,MIT Sea Grant 2003,2000,RINS
+Aasp,MIT Sea Grant 2003,2000,RIPC
+Aasp,MIT Sea Grant 2003,2000,RIRW
+Aasp,MIT Sea Grant 2003,2000,RISP
+Aasp,MIT Sea Grant 2003,2000,RIWM
+Dvex,Osman and Whitlatch 2007,2000,CTAP
+Dvex,MIT Sea Grant 2011,2007,MABP
+Dvex,USGS Woods Hole Science Center 2003-2007,2003,MACH2
+Dvex,MIT Sea Grant 2003,2000,MAMMA
+Dvex,Osterville/MA/Cotuit Bay,2005,MAOS
+Dvex,USGS Woods Hole Science Center 2003-2007,2003,MAPT
+Dvex,MIT Sea Grant 2011,2006,MARP
+Dvex,MIT Sea Grant 2011,2008,MASH
+Dvex,MIT Sea Grant 2003-2007,2000,MASM
+Dvex,MIT Sea Grant 2003,2000,MATM
+Dvex,MIT Sea Grant 2003-2007,2004,MAVH
+Dvex,USGS Woods Hole Science Center 2003-2007,2004,MAWF
+Dvex,USGS Woods Hole Science Center 2003-2007,2000,MAWH2
+Dvex,USGS Woods Hole Science Center 2003-2007,2006,MAWI
+Dvex,MIT Sea Grant 2008,2008,MEBH
+Dvex,Ruiz et al (unpublished),2001,MEBI
+Dvex,USGS Woods Hole Science Center 2003-2007,2002,MEBLI
+Dvex,USGS Woods Hole Science Center 2003-2007,1982,MEDA
+Dvex,Lazzeri and Auker 2022,2019,MEDMC
+Dvex,Bullard et al 2007,2006,MEEC
+Dvex,USGS Woods Hole Science Center 2003-2007,2005,MEEP
+Dvex,Lazzeri and Auker 2022,2019,MEPI
+Dvex,Lazzeri and Auker 2022,2019,MESB
+Dvex,Dijkstra et al 2007,2005,MEWH
+Dvex,Bullard et al 2007,2003,NHDI
+Dvex,USGS Woods Hole Science Center 2003-2007,2002,NHFP
+Dvex,USGS Woods Hole Science Center 2010,2009,NYMK
+Dvex,USGS Woods Hole Science Center 2003-2007,2004,NYPO
+Dvex,Carman et al 2009,2007,RIBI
+Dvex,Auker and Oviatt 2008,2005,RIBT
+Dvex,MIT Sea Grant 2003-2007,2000,RICH
+Dvex,Auker and Oviatt 2008,2005,RICM
+Dvex,Auker and Oviatt 2008,2005,RIFA
+Dvex,Auker and Oviatt 2008,2005,RIFW
+Dvex,Auker and Oviatt 2008,2005,RIGIB
+Dvex,Auker and Oviatt 2008,2005,RIGIC
+Dvex,MIT Sea Grant,2009,RIMP2
+Dvex,Auker and Oviatt 2008,2005,RISP
+Dvex,Auker and Oviatt 2008,2005,RITP
+Dvex,Auker and Oviatt 2008,2005,RIWP
+Scla,Whitlatch and Osman 2000,1997,CTGR
+Scla,Carlton 1989,1972,CTLIS
+Scla,MIT Sea Grant 2003,2003,CTMY
+Scla,MIT Sea Grant 2003,2003,CTSF
+Scla,Whitlatch and Osman 2000,1998,MABA
+Scla,MIT Sea Grant 2003,2000,MAGP2
+Scla,Whitlatch and Osman 2000,1998,MAHY2
+Scla,MIT Sea Grant 2003,2000,MAMMA2
+Scla,MIT Sea Grant 2003,2000,MANB
+Scla,MIT Sea Grant 2003,2000,MAQY
+Scla,MIT Sea Grant 2003,2000,MARW
+Scla,MIT Sea Grant,2000,MASM2
+Scla,MIT Sea Grant 2003,1986,MAWH3
+Scla,MIT Sea Grant 2003,2000,MAWR
+Scla,Whitlatch and Osman 2000,1998,MEBH
+Scla,Lazzeri and Auker 2022,2019,MEDMC
+Scla,MIT Sea Grant 2008,2007,MEDMC2
+Scla,MIT Sea Grant 2008,2007,MEJC
+Scla,Whitlatch and Osman 2000,1998,MEKE2
+Scla,MIT Sea Grant 2003,2003,MEPY2
+Scla,MIT Sea Grant 2003,2003,NHHP
+Scla,Berman et al 1992,1985,NHPM
+Scla,MIT Sea Grant 2003,2003,NYSJ
+Scla,MIT Sea Grant 2003,2003,RIAH
+Scla,MIT Sea Grant 2003,2004,RIBT
+Scla,MIT Sea Grant 2004,2000,RICH
+Scla,MIT Sea Grant 2003,2000,RICSP
+Scla,Whitlatch and Osman 2000,1998,RISK
+Scla,MIT Sea Grant 2003,2000,RIWA
+Scla,Plough 1978,1978,RIWM2
+Bvio,MIT Sea Grant 2003,2003,CTST
+Bvio,Whitlatch and Osman 2000,1998,MABA
+Bvio,MIT Sea Grant 2003,2000,MACA
+Bvio,Whitlatch and Osman 2000,1998,MACH
+Bvio,MIT Sea Grant 2003,2000,MADI
+Bvio,MIT Sea Grant 2003,2000,MADP
+Bvio,MIT Sea Grant 2003,2000,MAFR
+Bvio,MIT Sea Grant 2003,2000,MAHCM
+Bvio,Whitlatch and Osman 2000,1998,MAHY
+Bvio,MIT Sea Grant 2003,2003,MAMMA
+Bvio,Whitlatch and Osman 2000,1998,MAMP
+Bvio,MIT Sea Grant 2003,2000,MAPT
+Bvio,MIT Sea Grant 2003,2000,MARW
+Bvio,Whitlatch and Osman 2000,1998,MASA
+Bvio,MIT Sea Grant 2003,2000,MASM2
+Bvio,MIT Sea Grant 2003,2003,MASP
+Bvio,MIT Sea Grant 2003,2000,MATP
+Bvio,Whitlatch and Osman 2000,1998,MAWF
+Bvio,Whitlatch and Osman 2000,1998,MAWR
+Bvio,Whitlatch and Osman 2000,1998,MEBE
+Bvio,Whitlatch and Osman 2000,1998,MEBH
+Bvio,Whitlatch and Osman 2000,1998,MECA
+Bvio,Whitlatch and Osman 2000,1998,MECP
+Bvio,Lazzeri and Auker 2022,2019,MEDMC
+Bvio,MIT Sea Grant 2008,2007,MEDMC2
+Bvio,Trott 2004,2004,MEEP
+Bvio,Berman et al 1992,1980,MEFP
+Bvio,Martin et al 2011,2009,MEHH
+Bvio,MIT Sea Grant 2008,2007,MEJR
+Bvio,Whitlatch and Osman 2000,1998,MEKE
+Bvio,Lazzeri and Auker 2022,2019,MEPI
+Bvio,Lazzeri and Auker 2022,2019,MESB
+Bvio,MIT Sea Grant 2003,2003,MESF
+Bvio,USGS Woods Hole Science Center 2006,2002,METI
+Bvio,MIT Sea Grant 2008,2007,MEWM
+Bvio,MIT Sea Grant 2003,2000,MWRA
+Bvio,MIT Sea Grant 2003,2003,NHHP
+Bvio,Blezard 1999,1998,NHNC
+Bvio,Whitlatch and Osman 1995,2003,NYGP
+Bvio,MIT Sea Grant 2003,2000,RIAH
+Bvio,MIT Sea Grant 2006,2004,RIBT
+Bvio,MIT Sea Grant 2003,2000,RICH
+Bvio,Whitlatch and Osman 2000,1998,RIJT
+Bvio,MIT Sea Grant 2003,2003,RINS
+Bvio,MIT Sea Grant 2003,2000,RIRW
+Bvio,Whitlatch and Osman 2000,1998,RISK
+Bvio,MIT Sea Grant 2003,2000,RISP
+Bvio,Whitlatch and Osman 2000,1998,RITI
+Bvio,MIT Sea Grant 2003,2000,RIWA
+Bvio,MIT Sea Grant 2003,2000,RIWM

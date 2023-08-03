@@ -20,16 +20,17 @@ pacman::p_load(rio, tidyverse, flexdashboard,   #load packages
 occurrences = read_csv('occurrences.csv')
 ascidians = read_csv('species.csv')
 sites = read_csv('sites.csv') #import data
-joinedtosites <- merge(x=occurrences, y=sites, by = "SITEID", all.x = TRUE)
+join1 <- merge(x=occurrences, y=sites, by = "SITEID", all.x = TRUE)
+joinedtosites <-merge(x = join1, y = ascidians, by = "SpeciesID", all.x = TRUE)
 ```
 
-# About this Site
+# About this Tool
 
-The aim of this dashboard is to provide general information for anyone interested in understanding the distribution, biology, and identification of common biofouling species in the Northeastern United States from Long Island to Maine. 
+The aim of this tool is to provide general information for anyone interested in understanding the distribution, biology, and identification of common biofouling species in the Northeastern United States from Long Island to Maine. 
 
-If you have additional species you'd like to see added to this dashboard, please contact Dr. Linda Auker at linda.auker@gmail.com. 
+If you have additional species you'd like to see added here, please contact Dr. Linda Auker at linda.auker@gmail.com. 
 
-This dashboard was created by:
+This dashboard tool was created by:
 
 Dr. Linda Auker, Certified Senior Ecologist (ESA)
 
@@ -54,6 +55,20 @@ map
 ```
 
 ## Column 2 {.tabset data-width="350,"}
+
+### Reported occurrences of <i>Ascidiella aspersa</i> by Year
+
+```{r}
+joinedtosites %>%
+  filter(SpeciesID == "Aasp") %>%
+  mutate(Year = as.factor(Year)) %>%
+  group_by(Year) %>%
+  summarise(cnt = n()) %>%
+  ggplot(aes(x = Year, y = cnt)) +
+  geom_bar(stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences")
+```
 
 ### Image of <i>Ascidiella aspersa</i>
 
@@ -98,6 +113,20 @@ map
 ```
 
 ## Column 2 {.tabset data-width="350,"}
+
+### Reported occurrences of <i>Botrylloides violaceous</i> by Year
+
+```{r}
+joinedtosites %>%
+  filter(SpeciesID == "Bvio") %>%
+  mutate(Year = as.factor(Year)) %>%
+  group_by(Year) %>%
+  summarise(cnt = n()) %>%
+  ggplot(aes(x = Year, y = cnt)) +
+  geom_bar(stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences")
+```
 
 ### Image of <i>Botrylloides violaceous</i>
 
@@ -145,6 +174,20 @@ map
 
 ## Column 2 {.tabset data-width="350,"}
 
+### Reported occurrences of <i>Didemnum vexillum</i> by Year
+
+```{r}
+joinedtosites %>%
+  filter(SpeciesID == "Dvex") %>%
+  mutate(Year = as.factor(Year)) %>%
+  group_by(Year) %>%
+  summarise(cnt = n()) %>%
+  ggplot(aes(x = Year, y = cnt)) +
+  geom_bar(stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences")
+```
+
 ### Image of <i>Didemnum vexillum</i>
 
 ```{r, echo=FALSE, fig.cap="Cricket Raspet, some rights reserved (CC BY)", out.width = '50%'}
@@ -184,6 +227,20 @@ map
 
 ## Column 2 {.tabset data-width="350,"}
 
+### Reported occurrences of <i>Styela clava</i> by Year
+
+```{r}
+joinedtosites %>%
+  filter(SpeciesID == "Scla") %>%
+  mutate(Year = as.factor(Year)) %>%
+  group_by(Year) %>%
+  summarise(cnt = n()) %>%
+  ggplot(aes(x = Year, y = cnt)) +
+  geom_bar(stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences")
+```
+
 ### Image of <i>Styela clava</i>
 
 ```{r, echo=FALSE, fig.cap="Cricket Raspet, some rights reserved (CC BY)", out.width = '50%'}
@@ -207,74 +264,194 @@ From <a href = "https://www.marlin.ac.uk/species/detail/1883">Neish (2007)</a>: 
 
 # Connecticut {data-navmenu="State"}
 
+## Column 1 {data-width="650"}
+
+### Biofouling Species in Connecticut
+
 ```{r}
 ct<-filter(joinedtosites, state == "Connecticut")
-pal<- colorFactor(c("yellow", "orange", "white", "red"), ct$SpeciesID)
+pal<- colorFactor("RdYlBu", ct$SpeciesID)
 map <- leaflet() %>%
   addTiles() %>% #Add default OpenStreetMap tiles
-  addCircleMarkers(data = ct, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", ct$Details, ct$Source), fillColor = ~pal(ct$SpeciesID), fillOpacity = 0.9, color = "black", weight = 1) %>%
-  addLegend('bottomright', colors = c("yellow", "orange", "white", "red"), values = ct$SpeciesID, labels = c("Ascidiella aspersa", "Botrylloides violaceous", "Didemnum vexillum", "Styela clava"), title = 'Ascidian Species', opacity = 1.0)
+  addCircleMarkers(data = ct, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", ct$Details, ct$Source, paste(sep = " ", ct$Genus, ct$Species)), color = "black", fillOpacity = 1.0, fillColor = ~pal(ct$SpeciesID), weight = 1, clusterOptions = markerClusterOptions(removeOutsideVisibleBounds = TRUE))
 map
+```
+
+## Column 2 {data-width="350,"}
+
+### Biofouling Occurrences Reported in Connecticut
+
+```{r}
+conn<-joinedtosites%>%
+  filter(state == "Connecticut") %>%
+  group_by(Year, Genus) %>%
+  summarise(count = n())
+
+  ggplot(conn, (aes(x = conn$Year, fill = conn$Genus))) +
+  geom_bar(aes(y = count), position = "stack", stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences") +
+    scale_fill_brewer(palette = "RdYlBu", name = "Genus")
 ```
 
 # Maine {data-navmenu="State"}
 
+## Column 1 {data-width="650"}
+
+### Biofouling Species in Maine
+
 ```{r}
 me<-filter(joinedtosites, state == "Maine")
-pal<- colorFactor(c("yellow", "orange", "white", "red"), ct$SpeciesID)
+pal<- colorFactor("RdYlBu", me$SpeciesID)
 map <- leaflet() %>%
   addTiles() %>% #Add default OpenStreetMap tiles
-  addCircleMarkers(data = me, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", me$Details, me$Source), fillColor = ~pal(me$SpeciesID), fillOpacity = 0.9, color = "black", weight = 1) %>%
-  addLegend('bottomright', colors = c("yellow", "orange", "white", "red"), values = me$SpeciesID, labels = c("Ascidiella aspersa", "Botrylloides violaceous", "Didemnum vexillum", "Styela clava"), title = 'Ascidian Species', opacity = 1.0)
+  addCircleMarkers(data = me, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", me$Details, me$Source, paste(sep = " ", me$Genus, me$Species)), color = "black", fillOpacity = 1.0, fillColor = ~pal(me$SpeciesID), weight = 1, clusterOptions = markerClusterOptions(removeOutsideVisibleBounds = TRUE))
 map
+```
+
+## Column 2 {data-width="350,"}
+
+### Biofouling Occurrences Reported in Maine
+
+```{r}
+maine<-joinedtosites%>%
+  filter(state == "Maine") %>%
+  group_by(Year, Genus) %>%
+  summarise(count = n())
+
+  ggplot(maine, (aes(x = Year, fill = maine$Genus))) +
+  geom_bar(aes(y = count), position = "stack", stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences") +
+        scale_fill_brewer(palette = "RdYlBu", name = "Genus")
 ```
 
 # Massachusetts {data-navmenu="State"}
 
+## Column 1 {data-width="650"}
+
+### Biofouling Species in Massachusetts
+
 ```{r}
 ma<-filter(joinedtosites, state == "Massachusetts")
-pal<- colorFactor(c("yellow", "orange", "white", "red"), ma$SpeciesID)
+pal<- colorFactor("RdYlBu", ma$SpeciesID)
 map <- leaflet() %>%
   addTiles() %>% #Add default OpenStreetMap tiles
-  addCircleMarkers(data = ma, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", ma$Details, ma$Source), fillColor = ~pal(ma$SpeciesID), fillOpacity = 0.9, color = "black", weight = 1) %>%
-  addLegend('bottomright', colors = c("yellow", "orange", "white", "red"), values = ma$SpeciesID, labels = c("Ascidiella aspersa", "Botrylloides violaceous", "Didemnum vexillum", "Styela clava"), title = 'Ascidian Species', opacity = 1.0)
+  addCircleMarkers(data = ma, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", ma$Details, ma$Source, paste(sep = " ", ma$Genus, ma$Species)), fillColor = ~pal(ma$SpeciesID), fillOpacity = 1.0, color = "black", weight = 1, clusterOptions = markerClusterOptions(removeOutsideVisibleBounds = TRUE))
 map
+```
+
+## Column 2 {data-width="350,"}
+
+### Biofouling Occurrences Reported in Massachusetts
+
+```{r}
+mass<-joinedtosites%>%
+  filter(state == "Massachusetts") %>%
+  group_by(Year, Genus) %>%
+  summarise(count = n())
+
+  ggplot(mass, (aes(x = Year, fill = mass$Genus))) +
+  geom_bar(aes(y = count), position = "stack", stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences") + 
+        scale_fill_brewer(palette = "RdYlBu", name = "Genus")
 ```
 
 # New Hampshire {data-navmenu="State"}
 
+## Column 1 {data-width="650"}
+
+### Biofouling Species in New Hampshire
+
 ```{r}
 nh<-filter(joinedtosites, state == "New Hampshire")
-pal<- colorFactor(c("yellow", "orange", "white", "red"), nh$SpeciesID)
+pal<- colorFactor("RdYlBu", nh$SpeciesID)
 map <- leaflet() %>%
   addTiles() %>% #Add default OpenStreetMap tiles
-  addCircleMarkers(data = nh, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", nh$Details, nh$Source), fillColor = ~pal(nh$SpeciesID), fillOpacity = 0.9, color = "black", weight = 1) %>%
-  addLegend('bottomright', colors = c("yellow", "orange", "white", "red"), values = nh$SpeciesID, labels = c("Ascidiella aspersa", "Botrylloides violaceous", "Didemnum vexillum", "Styela clava"), title = 'Ascidian Species', opacity = 1.0)
+  addCircleMarkers(data = nh, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", nh$Details, nh$Source, paste(sep = " ", nh$Genus, nh$Species)), fillColor = ~pal(nh$SpeciesID), fillOpacity = 1.0, color = "black", weight = 1, clusterOptions = markerClusterOptions(removeOutsideVisibleBounds = TRUE))
 map
+```
+
+## Column 2 {.tabset data-width="350,"}
+
+### Biofouling Occurrences Reported in New Hampshire
+
+```{r}
+newhamp<-joinedtosites%>%
+  filter(state == "New Hampshire") %>%
+  group_by(Year, Genus) %>%
+  summarise(count = n())
+
+  ggplot(newhamp, (aes(x = Year, fill = newhamp$Genus))) +
+  geom_bar(aes(y = count), position = "stack", stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences") +
+        scale_fill_brewer(palette = "RdYlBu", name = "Genus")
 ```
 
 # New York {data-navmenu="State"}
 
+## Column 1 {data-width="650"}
+
+### Biofouling Species in New York
+
 ```{r}
 ny<-filter(joinedtosites, state == "New York")
-pal<- colorFactor(c("yellow", "orange", "white", "red"), ny$SpeciesID)
+pal<- colorFactor("RdYlBu", ny$SpeciesID)
 map <- leaflet() %>%
   addTiles() %>% #Add default OpenStreetMap tiles
-  addCircleMarkers(data = ny, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", ny$Details, ny$Source), fillColor = ~pal(ny$SpeciesID), fillOpacity = 0.9, color = "black", weight = 1) %>%
-  addLegend('bottomright', colors = c("yellow", "orange", "white", "red"), values = ny$SpeciesID, labels = c("Ascidiella aspersa", "Botrylloides violaceous", "Didemnum vexillum", "Styela clava"), title = 'Ascidian Species', opacity = 1.0)
+  addCircleMarkers(data = ny, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", ny$Details, ny$Source, paste(sep = " ", ny$Genus, ny$Species)), color = "black", fillOpacity = 1.0, fillColor = ~pal(ny$SpeciesID), weight = 1, clusterOptions = markerClusterOptions(removeOutsideVisibleBounds = TRUE))
 map
+```
+
+## Column 2 {data-width="350,"}
+
+### Biofouling Occurrences Reported in New York
+
+```{r}
+newyork<-joinedtosites%>%
+  filter(state == "New York") %>%
+  group_by(Year, Genus) %>%
+  summarise(count = n())
+
+  ggplot(newyork, (aes(x = newyork$Year, fill = newyork$Genus))) +
+  geom_bar(aes(y = count), position = "stack", stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences") +
+    scale_fill_brewer(palette = "RdYlBu", name = "Genus")
 ```
 
 # Rhode Island {data-navmenu="State"}
 
+## Column 1 {data-width="650"}
+
+### Biofouling Species in Rhode Island
+
 ```{r}
 ri<-filter(joinedtosites, state == "Rhode Island")
-pal<- colorFactor(c("yellow", "orange", "white", "red"), ri$SpeciesID)
+pal<- colorFactor("RdYlBu", ri$SpeciesID)
 map <- leaflet() %>%
   addTiles() %>% #Add default OpenStreetMap tiles
-  addCircleMarkers(data = ri, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", ri$Details, ri$Source), fillColor = ~pal(nh$SpeciesID), fillOpacity = 0.9, color = "black", weight = 1) %>%
-  addLegend('bottomright', colors = c("yellow", "orange", "white", "red"), values = ri$SpeciesID, labels = c("Ascidiella aspersa", "Botrylloides violaceous", "Didemnum vexillum", "Styela clava"), title = 'Ascidian Species', opacity = 1.0)
+  addCircleMarkers(data = ri, lng = ~lng, lat=~lat, popup = paste(sep = "<br/>", ri$Details, ri$Source, paste(sep = " ", ri$Genus, ri$Species)), fillColor = ~pal(ri$SpeciesID), fillOpacity = 1.0, color = "black", weight = 1, clusterOptions = markerClusterOptions(removeOutsideVisibleBounds = TRUE))
 map
+```
+
+## Column 2 {data-width="350,"}
+
+### Biofouling Occurrences Reported in Rhode Island
+
+```{r}
+rhody<-joinedtosites%>%
+  filter(state == "Rhode Island") %>%
+  group_by(Year, Genus) %>%
+  summarise(count = n())
+
+ggplot(rhody, (aes(x = rhody$Year, fill = rhody$Genus))) +
+  geom_bar(aes(y = count), position = "stack", stat="identity") +
+  xlab("Year") +
+  ylab("Number of Reported Occurrences") +
+    scale_fill_brewer(palette = "RdYlBu", name = "Genus")
 ```
 
 # Getting Started {data-navmenu="Panel Tutorial"}
